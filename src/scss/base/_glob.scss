@@ -1,0 +1,76 @@
+html,
+body {
+    font-family: $montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    color: $black;
+    background-color: $white;
+    box-sizing: border-box;
+
+	@include media(lg) {
+		font-size: 14px;
+	}
+}
+
+a {
+    font-weight: 500;
+    color: #1a348b;
+    text-decoration: underline;
+    transition: ease 0.2s;
+    transition-property: color, transform, opacity;
+    cursor: pointer;
+
+    &:hover {
+        color: #1f3fa9;
+        text-decoration: none;
+    }
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    transition: opacity ease .2s;
+}
+
+.title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    word-break: break-word;
+    color: $black;
+    span {
+        color: #1f3fa9;
+        font-weight: 600;
+    }
+    @include media(lg) {
+        font-size: 1.5rem;
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    width: 100%;
+}
+
+.modal-opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.separator {
+    height: 5px;
+    width: 60px;
+    background-color: #1f3fa9;
+    border: initial;
+}

@@ -1,0 +1,68 @@
+.loader {
+    opacity: 0;
+    transition: opacity ease .2s;
+    // transition-duration: .6s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a348b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    pointer-events: none;
+    animation: fadeIn .3s ease-out;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: solid $white;
+        animation: pulse 1.6s ease-in infinite;
+    }
+
+    &:after {
+        animation-delay: -.8s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(0);
+            border-width: 0;
+            opacity: 0
+        }
+    
+        15% {
+            opacity: 1;
+            border-width: 20px
+        }
+    
+        to {
+            opacity: 0;
+            transform: scale(1);
+            border-width: 0
+        }
+    }
+}
+body.loading .loader {
+    opacity: 1;
+    z-index: $z-loader;
+    pointer-events: all;
+}
+body.loading .main {
+    opacity: 0;
+}

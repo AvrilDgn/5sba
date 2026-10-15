@@ -1,0 +1,53 @@
+.successes {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 0;
+    &:after {
+        background-image: url(../img/tree-2.png);
+        content: '';
+        position: absolute;
+        left: -250px;
+        top: -190px;
+        z-index: -3;
+        height: 1592px;
+        width: 935px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        @include media(sm) {
+            display: none;
+        }
+    }
+
+    .container {
+        padding: 5rem;
+        align-items: center;
+        text-align: center;
+
+        @include media(sm) {
+            padding: 3rem;
+        }
+        @include media(xs) {
+            padding: 1rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__separator {
+        margin: 0 0 2rem;
+    }
+
+    &__subtitle {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+        color: #82868f;
+
+        @include media(lg) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__button {}
+}

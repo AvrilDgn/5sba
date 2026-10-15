@@ -1,0 +1,94 @@
+.written-reviews {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f2f2f2;
+
+    &__slider {
+        user-select: none;
+    }
+
+    &__slider-wrap {
+        .slick-list {
+            cursor: grab;
+        }
+    }
+
+    .slick-dots {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        line-height: 1;
+
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            background: #fff;
+            box-shadow: 0 0 0 2px rgb(0 0 0 / 50%);
+            border-radius: 50%;
+            opacity: .25;
+            cursor: pointer;
+            transform: scale(.8);
+            transition: transform ease 0.2s;
+
+            &.slick-active {
+                opacity: 1;
+                transform: scale(1);
+                background-color: #1f3fa9;
+                box-shadow: 0 0 0 2px #bec6e1;
+            }
+        }
+    }
+}
+
+.written-review {
+    flex-direction: column;
+    font-size: 1rem;
+    padding: 2rem;
+    white-space: normal;
+    text-align: center;
+    margin: 0 1em;
+    justify-content: center;
+    height: auto;
+    line-height: 1.6;
+
+    @include media(sm) {
+        padding: 1rem 1rem 1rem;
+    }
+
+    &__quote-sign {
+        color: #e2e2e2;
+        font-family: Arial, serif;
+        font-size: 12rem;
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+        line-height: .3;
+    }
+
+
+    &__text {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #91939a;
+    }
+
+    &__company {
+        margin-bottom: 1rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #91939a;
+    }
+
+    &__author {
+        font-size: 1.2rem;
+        color: #91939a;
+    }
+}

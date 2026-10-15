@@ -1,0 +1,17 @@
+.slick-list {
+	width: 100%;
+	overflow: hidden;
+}
+
+.slick-track {
+	display: flex;
+}
+
+.slick-item {
+	display: block;
+	flex-shrink: 0;
+}
+
+.slick-hidden {
+	display: none !important;
+}

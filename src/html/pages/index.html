@@ -1,0 +1,18 @@
+{% extends "../layouts/main-layout.html" %}
+{% from "../includes/headers/header.html" import header as header %}
+
+{% block content %}
+   {{ header('main') }}
+	
+	{% include "../includes/sections/main.html" %}
+
+	{% include "../includes/footers/footer.html" %}
+{% endblock %}
+
+{% block modal %}
+	{% include "../includes/modals/modal.html" %}
+{% endblock %}
+
+{% block preloader %}
+	{% include "../includes/preloader/preloader.html" %}
+{% endblock %}

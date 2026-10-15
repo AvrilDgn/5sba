@@ -1,0 +1,28 @@
+{% macro header() %}
+<!-- Header -->
+<header class="header" data-fixed>
+   <div class="container">
+      <a href="/" class="header__logo">
+         <img src="img/logo.svg" width="180" loading="lazy" alt="5 Stars Academy">
+      </a>
+      <nav class="header__nav">
+         <ul>
+            <li class="active"><a href="#cover"><span>Главная</span></a></li>
+            <li><a href="#about"><span>О книге продаж</span></a></li>
+            <li><a href="#steps"><span>Этапы работы</span></a></li>
+            <li><a href="#written-reviews"><span>Наши клиенты</span></a></li>
+            <li><a href="#" data-modal="modal-feedback"><span>Подробнее</span></a></li>
+         </ul>
+      </nav>
+      <a class="header__order-btn" href="#callback"><span>Оставить заявку</span></a>
+      <button class="header__open-menu-btn" aria-label="Open menu">
+         <svg aria-hidden="true" version="1.1" viewBox="0 0 100 100">
+            <path d="M5 15h90v10H5z"></path>
+            <path d="M5 45h90v10H5z"></path>
+            <path d="M5 75h90v10H5z"></path>
+         </svg>
+      </button>
+   </div>
+</header>
+<!-- End Header -->
+{% endmacro %}

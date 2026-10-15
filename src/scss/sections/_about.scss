@@ -1,0 +1,74 @@
+.about {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    z-index: 0;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -70px;
+        height: 268%;
+        width: 100%;
+        background-image: url(../img/tree-1.png);
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        z-index: -3;
+        @include media(sm) {
+            display: none;
+        }
+    }
+
+    .container {
+        flex-direction: row;
+
+        @include media(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 1 50%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 1 50%;
+
+        @include media(sm) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__separator {
+        margin: 0 0 2rem;
+    }
+
+    &__subtitle {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        color: #82868f;
+        
+        @media screen and (max-width: 1400px) {
+            font-size: 1.2rem;
+        }
+    }
+}

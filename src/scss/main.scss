@@ -1,0 +1,49 @@
+/*
+Helpers
+*/
+@import "helpers/colors";
+@import "helpers/fonts";
+@import "helpers/z-index";
+@import "helpers/variables";
+@import "helpers/mixins";
+/*
+Vendors
+*/
+@import "vendors/common";
+/*
+Base
+*/
+@import "base/reset";
+@import "base/fontfaces";
+@import "base/glob";
+/*
+Components
+*/
+@import "components/loader";
+@import "components/button";
+@import "components/form";
+@import "components/slider";
+@import "components/overlay";
+/*
+Modules
+*/
+@import "modules/header";
+@import "modules/modal";
+@import "modules/footer";
+/*
+Sections
+*/
+@import "sections/cover";
+@import "sections/about";
+@import "sections/tasks";
+@import "sections/your-sellers";
+@import "sections/peculiarity";
+@import "sections/steps";
+@import "sections/author";
+@import "sections/callback";
+@import "sections/successes";
+@import "sections/books";
+@import "sections/algorithm";
+@import "sections/written-reviews";
+@import "sections/printed-reviews";
+@import "sections/video-reviews";

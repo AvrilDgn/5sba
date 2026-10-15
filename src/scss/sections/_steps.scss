@@ -1,0 +1,229 @@
+.steps {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+    overflow: hidden;
+
+    // @include media(sm) {
+    //     padding: 5rem 0 30rem;
+    // }
+    // @include media(xs) {
+    //     padding: 5rem 0 22rem;
+    // }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+
+        button {
+            margin: 0;
+            padding: 5px 10px;
+            border: unset;
+            background: transparent;
+            color: #999;
+            cursor: pointer;
+            transition: .2s ease;
+            transition-property: color;
+
+            &.active {
+                font-weight: 600;
+                color: #1a348b;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.tree {
+    transition: transform .5s ease;
+
+    @include media(sm) {
+        width: 180vw;
+        max-width: initial;
+    }
+
+    &__back {
+        path {
+            fill: #E3E3E3;
+            transition: fill .3s ease;
+        }
+    }
+
+    &__front-half {
+        pointer-events: none;
+    }
+
+    &__item {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &__leaf {
+        fill: transparent;
+        transition: fill .3s ease;
+    }
+
+    &__number {
+        fill: #e6e6e6;
+        transition: fill .3s ease;
+    }
+
+    &__tooltip {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__tooltip-title {
+        font-weight: 500;
+        font-size: 20px;
+        transform: translateY(-300px);
+        transition: transform .3s ease;
+    }
+
+    &__tooltip-desc {
+        height: 100%;
+        transform: translateY(-300px);
+        transition: transform .4s ease;
+
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+            color: #808080;
+        }
+    }
+
+    &__tooltip-separator {
+        opacity: 0.25;
+        stroke: #000001;
+        stroke-miterlimit: 10;
+        transform: translateY(-300px);
+        transition: transform .3s ease;
+    }
+
+    &__tooltip-icon {
+        transform: translateY(-300px);
+        transition: transform .2s ease;
+
+        * {
+            fill: #003DAC;
+        }
+    }
+
+    &[data-value='online'] {
+        .tree__back {
+            .online {
+                path {
+                    fill: #F4F4F4;
+                }
+            }
+        }
+
+        .tree__front-half.online {
+            pointer-events: all;
+
+            .tree__number {
+                fill: silver;
+            }
+
+            .tree__item {
+                &.active {
+                    .tree__leaf {
+                        fill: #1F3FA9;
+                    }
+    
+                    .tree__number {
+                        fill: $white;
+                    }
+    
+                    .tree__tooltip {
+                        opacity: 1;
+                        transition-delay: .3s;
+                        transition: opacity .4s ease;
+    
+                        &-title {
+                            transform: translateY(0);
+                        }
+    
+                        &-desc {
+                            transform: translateY(0);
+                        }
+    
+                        &-separator {
+                            transform: translateY(0);
+                        }
+    
+                        &-icon {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(sm) {
+            transform: translateX(0);
+        }
+    }
+
+    &[data-value='offline'] {
+        .tree__back {
+            .offline {
+                path {
+                    fill: #F4F4F4;
+                }
+            }
+        }
+
+        .tree__front-half.offline {
+            pointer-events: all;
+
+            .tree__number {
+                fill: silver;
+            }
+
+            .tree__item {
+                &.active {
+                    .tree__leaf {
+                        fill: #1F3FA9;
+                    }
+    
+                    .tree__number {
+                        fill: $white;
+                    }
+    
+                    .tree__tooltip {
+                        opacity: 1;
+                        transition-delay: .3s;
+                        transition: opacity .4s ease;
+    
+                        &-title {
+                            transform: translateY(0);
+                        }
+    
+                        &-desc {
+                            transform: translateY(0);
+                        }
+    
+                        &-separator {
+                            transform: translateY(0);
+                        }
+    
+                        &-icon {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(sm) {
+            transform: translateX(-48%);
+        }
+    }
+}

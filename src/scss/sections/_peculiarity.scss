@@ -1,0 +1,48 @@
+.peculiarity {
+    .container {
+        padding: 0;
+        align-items: center;
+    }
+
+    &__wrap {
+        padding: 5rem .5rem;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-image: url(../img/peculiarity.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+
+        @include media(lg) {
+            padding: 5rem 4rem;
+            max-width: 960px;
+        }
+        @include media(sm) {
+            padding: 3rem;
+        }
+        @include media(xs) {
+            padding: 1rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1em;
+        color: $white;
+    }
+
+    &__separator {
+        margin: 0 0 2rem;
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        color: #cecfcf;
+        @include media(lg) {
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,181 @@
+.cover {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 670px;
+    padding-top: 4.5rem;
+    background-image: url(../img/cover-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-size: 1rem;
+    z-index: 1;
+    overflow: hidden;
+
+    @include media(sm) {
+        font-size: .85em;
+    }
+
+    &__main {
+        margin: auto 0;
+        padding: 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+        font-size: 3em;
+        line-height: 1;
+        color: $white;
+        word-break: break-word;
+
+        &>span:first-child {
+            color: #df0515;
+            font-size: 0.7em;
+            font-weight: 500;
+            line-height: 2em;
+        }
+
+        &>span:last-child {
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 100%;
+                border-left: 0.1em solid #df0515;
+                position: absolute;
+                left: -0.55em;
+                top: 0;
+            }
+        }
+        @media screen and (max-width: 1400px) {
+            &>span:last-child::before {
+                left: -0.28em;
+            }
+        }
+        @include media(lg) {
+            font-size: 2em;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 1.5em;
+        font-size: 1.6em;
+        line-height: 1.4;
+        color: $white;
+
+        &>span {
+            color: #df0515;
+            font-weight: 700;
+        }
+        @include media(lg) {
+            font-size: 1.4em;
+        }
+    }
+
+    &__button {
+        align-self: flex-start;
+        background-color: unset;
+    }
+
+    .problems {
+        display: flex;
+        border-top: 1px solid hsla(0, 0%, 100%, .25);
+
+        .container {
+            flex-direction: row;
+
+            @include media(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &__slider {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 50%;
+            padding: 1rem 1rem 1rem 0;
+            min-width: 0;
+            border-right: 1px solid hsla(0, 0%, 100%, .25);
+            @include media(sm) {
+                border-bottom: 1px solid hsla(0, 0%, 100%, .25);
+                border-right: initial;
+                flex: 1 1 100%;
+            }
+        }
+
+        &__slider-nav {
+            margin-top: 1rem;
+            margin-bottom: 1.4rem;
+            display: flex;
+            font-size: 1.4rem;
+            user-select: none;
+
+            .slider-arrow {
+                background-color: initial;
+                cursor: pointer;
+
+                &--prev {
+                    margin-right: 1.2rem;
+                }
+
+                &--next {
+                    margin-left: 1.2rem;
+                    transform: rotateY(190deg);
+                }
+            }
+
+            @include media(sm) {
+                margin: 0 0 .5rem 0;
+            }
+        }
+
+        &__slider-pagination {
+            color: $white;
+        }
+
+        &__slider-wrap {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: $white;
+            white-space: normal;
+            user-select: none;
+            cursor: grab;
+        }
+
+        &__total {
+            padding: 1.5rem 0 1.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 50%;
+            @include media(sm) {
+                padding: 1rem 0;
+                flex: 1 1 100%;
+            }
+        }
+
+        &__total-title {
+            margin-bottom: 0.5em;
+            min-width: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1;
+            color: $white;
+            word-break: break-word;
+
+            &>span {
+                font-size: 1.3em;
+            }
+        }
+
+        &__total-subscription {
+            color: $white;
+
+            p+p {
+                margin-top: 0.5em;
+            }
+        }
+    }
+}

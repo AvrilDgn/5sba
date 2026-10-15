@@ -1,0 +1,97 @@
+.video-reviews {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #eeeeee;
+    overflow: hidden;
+
+    &__slider {
+        position: relative;
+
+        .slider-arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: initial;
+            border: none;
+            color: #fff;
+            background-color: transparent;
+            top: unset;
+            bottom: -35px;
+            width: 44px;
+            transition: ease .2s;
+            transition-property: background-color, color, opacity;
+            cursor: pointer;
+
+            svg {
+                stroke: rgba(0, 0, 0, .5);
+                stroke-width: 2px;
+                width: 1.5rem;
+                height: 1.5rem;
+                z-index: 1;
+                transition: opacity ease 0.2s;
+                fill: black;
+                opacity: 0.8;
+            }
+
+            &--prev {
+                left: unset;
+                right: calc(50% + 5px);
+            }
+
+            &--next {
+                right: calc(50% - 47px);
+
+                svg {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            &:hover {
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__slider-wrap {
+        padding: 2rem 0;
+        overflow: hidden;
+        cursor: grab;
+
+        .slick-list {
+            overflow: initial;
+            user-select: none;
+        }
+
+        @include media(sm) {
+            margin-left: -1em;
+            margin-right: -1em;
+            width: calc(100% + 2em);
+        }
+
+        @include media(xs) {
+            padding: 1rem 0;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: ease .2s;
+        transition-property: transform;
+        cursor: pointer;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &:not(.slick-center) {
+            transform: scale(.8);
+        }
+    }
+}

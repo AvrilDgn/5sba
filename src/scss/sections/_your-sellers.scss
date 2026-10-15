@@ -1,0 +1,50 @@
+.your-sellers {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    overflow: hidden;
+
+    @include media(sm) {
+        padding-top: 0;
+    }
+
+    .container {
+        flex-direction: row;
+
+        @include media(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include media(sm) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__separator {
+        margin: 0 0 2rem;
+    }
+
+    &__image {
+        flex: 1 1 60%;
+
+        img {
+            margin: 0 auto;
+            display: block;
+            transform: scale(1.3);
+        }
+    }
+}
