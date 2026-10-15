@@ -3,7 +3,7 @@
 ## Описание проекта
 
 Адаптивная вёрстка лендинга услуг по улучшению бизнеса.
-Сайт находится по адресу — [salesstandard.ru"](https://salesstandard.ru/)
+Сайт находится по адресу — [salesstandard.ru](https://salesstandard.ru/)
 
 ## Технологии
 
@@ -76,6 +76,6 @@ build/
 ## Автор
 
 - **Разработчик:** Филипп Горюнов
-- **GitHub:** [@username](https://github.com/AvrilDgn)  
+- **GitHub:** [@AvrilDgn](https://github.com/AvrilDgn)  
 - **Telegram:** [@Phil_Goryunov]  
 - **Email:** philhorus@yandex.ru  
